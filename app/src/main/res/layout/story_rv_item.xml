@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/storyimage"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ganesh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_color="#814646"
+        app:riv_border_width="2dip"
+        app:riv_corner_radius="10dip"
+        app:riv_mutate_background="true" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/UserImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/boy"
+        app:layout_constraintStart_toStartOf="@+id/storyimage"
+        app:layout_constraintTop_toTopOf="@+id/storyimage" />
+
+    <TextView
+        android:id="@+id/name_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:backgroundTint="#E1DBDB"
+        android:gravity="center"
+        android:text="name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/storyimage"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@id/storyimage"
+        app:layout_constraintTop_toBottomOf="@+id/UserImage" />
+
+    <com.devlomi.circularstatusview.CircularStatusView
+        android:id="@+id/statusCircle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/UserImage"
+        app:layout_constraintEnd_toEndOf="@+id/UserImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/UserImage"
+        app:layout_constraintTop_toTopOf="@+id/UserImage"
+        app:layout_constraintVertical_bias="0.0"
+        app:portion_color="#C83429"
+        app:portion_spacing="6dp"
+        app:portion_width="2dp"
+        app:portions_count="4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
